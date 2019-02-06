@@ -7,8 +7,8 @@ thickness=3;
 base_bottom=26/2;
 base_top=25/2;
 
-magnet_radius=6/2;
-magnet_thickness=2;
+magnet_radius=5.8/2;
+magnet_thickness=2.3;
 
 difference(){
     // base plate
@@ -20,11 +20,17 @@ difference(){
         cube([base_length + 2, base_depth/4, thickness+2]);
     // minis
     for(x=[0:2])
-        translate([2+base_bottom+3*x+x*2*base_bottom, base_bottom+2,-1])
+        translate([2.5+base_bottom+3*x+x*2*base_bottom, base_bottom+2,-1])
             cylinder(r1=base_bottom, r2=base_top, h=thickness+2);    
     }
     // magnets
-    for(x=[0:3])
-        translate([3.5+x+x*2*base_bottom,4,-0.2])
+    for(x=[1:2])
+        translate([3+x+x*2*base_bottom,4,-0.2])
             cylinder(r=magnet_radius, h=magnet_thickness);
+    
+    translate([3.4,4,-0.2])
+        cylinder(r=magnet_radius, h=magnet_thickness);
+    
+        translate([86,4,-0.2])
+        cylinder(r=magnet_radius, h=magnet_thickness);
 }

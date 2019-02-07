@@ -7,8 +7,8 @@ thickness=3;
 base_bottom=26/2;
 base_top=25/2;
 
-magnet_radius=5.8/2;
-magnet_thickness=2.3;
+magnet_radius=5.7/2;
+magnet_thickness=2.5;
 
 difference(){
     // base plate
